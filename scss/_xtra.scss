@@ -1,0 +1,94 @@
+
+// ----// _xtra.scss
+
+//colour palette
+$colAqua:  #7FDBFF;
+$colBlue:  #0074D9;
+$colNavy:  #001F3F;
+$colTeal:  #39CCCC;
+$colGreen: #2ECC40;
+$colOlive: #3D9970;
+$colLime:  #01FF70;
+//-
+$colYellow:  #FFDC00;
+$colOrange:  #FF851B;
+$colRed:     #FF4136;
+$colFuchsia: #F012BE;
+$colPurple:  #B10DC9;
+$colMaroon:  #85144B;
+//-
+$colWhite:  #FFFFFF;
+$colSilver: #DDDDDD;
+$colGrey:   #AAAAAA;
+$colBlack:  #111111;
+
+
+/*PRELOADER*/
+#wall {
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background: $colWhite;
+    z-index: 100;
+}
+
+.wallfade {
+    animation: wallfall-motion normal 1 both 3s;
+    
+}
+
+@keyframes wallfall-motion {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.wallhide {
+    display: none;
+}
+//--
+
+// VIEWPORT CHECK ANIMATIONS
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+.motion-BlurIn {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+// NAV SVG ANIMATION
+
+svg#navBttn-Layer {
+    fill: rgba(43, 51, 58, 1);
+    transition: 0.3s ease;
+}
+
+svg#navBttn-Layer:hover {
+    fill: rgba(0, 249, 150, 1);
+}

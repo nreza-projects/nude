@@ -1,0 +1,96 @@
+@import 'norm';
+//@import 'toast';
+@import 'default';
+@import 'xtra';
+
+
+    header,footer,section,aside,article {
+        h1{@include allCaps;@include cText;}
+    }   
+    
+    ul li {
+        @include cText;
+    }
+    
+.container {
+        position: relative;
+        top:0;
+        width:100%;
+        max-width: 100vw;
+        overflow: hidden;
+}
+
+
+//NAV SETTING
+
+#logoBox {
+    float: left;
+    width: 3.750em;
+    height: 3.750em;
+    img{height: 100%; width: auto;}
+}
+#navBttn {
+    float: right;
+    width: 3.750em;
+    height: 3.750em;
+    img{height: 100%; width: auto;}
+    cursor: pointer;
+}
+
+
+#navBox {
+  display: none;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-color: rgba(37, 46, 54, 0.98);
+  z-index: 999999;
+  overflow: hidden;
+      ul {margin-top: 8.0em;}
+      ul li  {
+        @include baseTypeFont;
+          
+        height: 20vh; 
+        text-align: center;
+        a:link {color: rgba(244, 244, 244, 1);}
+        a:visited {color: rgba(244, 244, 244, 1);}
+        a:hover {color: rgba(240, 75, 101, 1);}
+		}
+
+#navBttnX {
+	top: 0;
+	float: right; 
+	width: 3.125em;
+	height: 3.125em;
+	float: right;
+	cursor: pointer;
+	img {width:100%;height:100%;  z-index: 9999;}
+  	}
+}
+
+
+
+
+
+/* home-page.html */
+#homePage { 
+        padding: 30vh 3vw 0em 3vw;
+}
+
+
+// HEADER
+
+.top-bar {
+    position: absolute;
+    top:2.5vh;
+    z-index: 5;
+    min-height:  3.750em;
+    left: 1.5vw;
+    right:1.5vw;
+}

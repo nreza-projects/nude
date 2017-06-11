@@ -1,0 +1,192 @@
+
+//  --  -- Inputs
+
+
+
+$colLight: rgba(70, 89, 98, 0.1);
+$colMid: rgba(43, 51, 58, 0.45);
+$colDark: rgba(43, 51, 58, 0.9);
+
+//for fonts
+$colType: rgba(43, 51, 58, 1);
+$colHead: #013866;
+$colLink: rgba(43, 51, 58, 1);
+$colLinkAlt: rgba(120, 144, 155, 1);
+
+
+
+
+
+
+/*
+font-family: 'Roboto', sans-serif; 700
+font-family: 'Roboto Slab', serif; 300
+*/
+
+$baseFont: 'Roboto SLab', 'Helvetica Neue';
+$baseWeight: 300;
+
+$headFont: 'Roboto', 'Helvetica';
+$headWeight: 700;
+
+$subFont: 'Roboto Slab', 'Impact';
+$subWeight: 300;
+
+
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 1440px; // max width
+    overflow: hidden;
+}
+
+
+
+
+//TEMPORARIES
+
+
+
+//header,footer {background: rgba(8, 107, 242, 0.1);}
+
+//section {background: rgba(0, 249, 150, 0.1);}
+//article {background: rgba(248, 80, 87, 0.1)}
+//aside {background: rgba(253, 202, 0, 0.1)}
+
+
+// -- -- 
+
+
+/*COLOURS*/
+body {font-family: $baseFont; font-weight: $baseWeight; color: $colType; }
+h1,h2,h3,h4,h5 {color: $colHead;}
+
+a:link,a:active,a:visited {color:$colLink; transition: 0.2s ease;
+}
+a:hover {color:$colLinkAlt;}
+
+@mixin bg-light { background: $colLight;}
+@mixin bg-dark { background: $colDark;}
+
+
+/*FONT*/
+
+
+/*base font size */
+html {font: $baseWeight  16px normal $baseFont, sans-serif; }
+/*800-*/@media (max-width: 800px) {
+        html { font-size: 14px; }
+/*-800*/}
+/*400- */@media (max-width: 400px) {
+        html { font-size: 13px; }
+/* -400*/}
+
+body {
+    font-family: $baseFont;
+    font-weight: $baseWeight;
+}
+
+header,footer {font-size: 0.8em;line-height: 1em;}
+
+
+p {
+    font: $baseWeight normal 1em/1.5 $baseFont, sans-serif;
+    margin-bottom: 1.25em;
+}
+
+h1,h2,h3,h4,h5 {font-family: $headFont; font-weight: $baseWeight; line-height: 0.9em;}
+
+
+h1 {font-size: 2.125em;}
+h2 {font-size: 1.55em;}
+h3 {font-size: 1.1em;}
+h4 {font-size: 0.9em;}
+h5 {font-size: 0.85em;}
+small {font-size: 0.75em;}
+
+// 2. *** BOX SIZING ***
+html {box-sizing: border-box;}
+*,*::before,*::after {box-sizing: inherit;}
+//--
+// 3. *** REMOVE LIST DOTS ***
+ul li {list-style: none;}
+* {margin: 0;padding: 0;}
+//--
+// 4. *** CLEAR FIX ***
+.cf:before,.cf:after {content: " "; display: table;}
+.cf:after {clear: both;}
+	/**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */
+.cf {*zoom: 1;}
+//--
+
+// 5. *** TEXT ***
+.txt-c {text-align: center;}
+.txt-l {text-align: left;}
+.txt-r {text-align: right;}
+.txt-j {text-align: justify;}
+
+@mixin cText {text-align: center;} 
+@mixin jText {text-align: justify;}
+@mixin lText {text-align: left;}
+@mixin rText {text-align: right;}
+@mixin allCaps {text-transform: uppercase;}
+@mixin normText {text-transform: none;}
+//--
+
+// DIVS WITH HEIGHTS
+
+.h-100 {min-height: 6.250em;}
+.h-200 {min-height: 12.500em;}
+.h-300 {min-height: 18.750em;}
+.h-400 {min-height: 25.000em;}
+.h-500 {min-height: 31.250em;}
+.h-600 {min-height: 37.500em;}
+.h-700 {min-height: 43.750em;}
+.h-800 {min-height: 50.000em;}
+.h-1000 {min-height: 62.500em}
+ //--
+
+/*PADDINGS*/
+
+.pad-sides {padding-left: 2.500em;padding-right: 2.500em;}
+.pad-roof {padding-top: 2.500em;}
+.pad-floor {padding-bottom: 2.500em;}
+
+
+/*800- */@media (800px) {
+    .pad-sides {padding-left: 1.500em;padding-right: 1.500em;}
+    .pad-roof {padding-top: 1.5000em;}
+    .pad-floor {padding-bottom: 1.2500em;}
+/* -800*/}
+
+
+/*Invisible and Visible*/
+.space-invisible{
+  opacity:0;
+}
+.space-visible{
+  opacity: 1;
+}
+
+.nsf-l {
+	display: none;
+}
+.nsf-lm {
+	display: none;
+}
+
+
+
+//TYPOGRAPHY
+
+@mixin baseTypeFont {
+    font: $baseWeight normal 1em/1.5 $baseFont, sans-serif;
+}
+@mixin headTypeFont {
+    font: $headWeight normal 1em/1.1em $headFont, sans-serif;
+}
